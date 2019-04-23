@@ -29,3 +29,8 @@ img {
 .card-header {
     background-color: #b3e0af;
 }
+
+.resume-list {
+    list-style: none;
+    border-left: 2px solid #40424a;
+}
