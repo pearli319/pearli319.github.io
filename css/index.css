@@ -1,36 +1,85 @@
-img {
-    display: inline-block;
-    width: 300px;
+.jumbotron {
+    background-color: #0072c2;
+    color: white;
+}
+
+footer {
+    margin-top: 50px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #423535;
+    padding-top: 25px;
+    color: #423535;
+}
+
+body {
+    background-color: #B4E1FF;
+}
+
+.name {
+    font-size: 14px;
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+    color: #212121;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.price {
+    color: #ff6709;
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.image {
+    width: 160px;
+    height: 160px;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    margin-left: 37px;
+    margin-right: 37px;
+}
+
+.item {
     height: 300px;
-    border-radius: 50%;
-    border: 1px solid #eee;
-    padding: 5px;
+    position: relative;
+    border: none;
     background: #fff;
+    text-align: center;
+    background-clip: border-box;
+    background-image: none;
+    background-origin: padding-box;
+    margin-bottom: 20px;
+    margin-left: 14px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-top: 34px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-#language {
-    font-family: Microsoft JhengHei;
-    display: inline-block;
-    width: 400px;
-    height: 320px;
-    vertical-align: middle;
-    margin-left: 300px;
+.item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    transform: translate3d(-5px, -5px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: linear;
 }
 
-#certificate {
-    font-family: Microsoft JhengHei;
-    display: inline-block;
-    width: 400px;
-    height: 320px;
-    vertical-align: middle;
-    margin-right: 200px;
+.btn-primary {
+    color: #fff;
+    background-color: #68BDEA;
+    border-color: #68BDEA;
 }
 
-.card-header {
-    background-color: #b3e0af;
-}
-
-.resume-list {
-    list-style: none;
-    border-left: 2px solid #40424a;
+.page-link{
+    color:#1d2b69;
 }
