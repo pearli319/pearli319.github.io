@@ -4,21 +4,18 @@ WWTBAM.Game = function() {
     // Here's our array of questions in the following format :
     // [question, potential answers, answer, money]
     questions = [
-        ['Complete this phrase. As sick as a...', ['Penguin', 'Parrot', 'Puffin', 'Partridge'], 'Parrot', 0],
-        ["Which legal document states a person's wishes regarding the disposal of their property after death?", ['Will', 'Shall', 'Would', 'Should'], 'Will', 100],
-        ['Complete the title of the James Bond film The Man With The Golden...', ['Gun', 'Tooth', 'Delicious', 'Eagle'], 'Gun', 200],
-        ['Which of these fruits shares its name with something superior or desirable?', ['Apricot', 'Mango', 'Grapefruit', 'Plum'], 'Plum', 300],
-        ['In which sport do two teams pull at the opposite ends of a rope?', ['Ice hockey', 'Basketball', 'Tug of war', 'Polo'], 'Tug of war', 500],
-        ['Where would a cowboy wear his chaps?', ['On his hands', 'On his arms', 'On his legs', 'On his head'], 'On his legs', 1000],
-        ['Which of these zodiac signs is not represented by an animal that grows horns?', ['Taurus', 'Capricorn', 'Aquarius', 'Aries'], 'Aquarius', 2000],
-        ['Sherpas and Gurkhas are native to which country?', ['Russia', 'Ecuador', 'Nepal', 'Morocco'], 'Nepal', 4000],
-        ['Prime Minister Tony Blair was born in which country?', ['England', 'Northern Ireland', 'Scotland', 'Wales'], 'Scotland', 8000],
-        ['Whose autobiography has the title, "A Long Walk to Freedom"?', ['Ranulph Fiennes', 'Mother Teresa', 'Nelson Mandela', 'Mikhail Gorbachev'], 'Nelson Mandela', 16000],
-        ['Duffel coats are named after a town in which country?', ['Belgium', 'Holland', 'Germany', 'Austria'], 'Belgium', 32000],
-        ["Complete this stage instruction in Shakespeare's 'The Winter's Tale', 'Exit, pursued by a...'?", ['Tiger', 'Clown', 'Bear', 'Dog'], 'Bear', 64000],
-        ["The young of which creature is known as a 'squab'?", ['Salmon', 'Horse', 'Pigeon', 'Octopus'], 'Pigeon', 125000],
-        ['Who is the patron saint of Spain?', ['Saint James', 'Saint John', 'Saint Benedict', 'Saint Peter'], 'Saint John', 150000],
-        ['Which king was married to Eleanor of Aquitaine?', ['Henry I', 'Henry II', 'Richard I', 'Henry V'], 'Henry II', 1000000]
+       ['Which is not the theme about Conrad’s “Heart of Darkness”?', ['A. racial discrimination', 'B. feminism', 'C. anti-war', 'D. anti-colonial'], 'C. anti-war', 0],
+        ['What doctrine is Joseph Conrad regarded as a pioneer?', ['A. romanticism', 'B. utopianism', 'C. humanitarianism', 'D. modernism'], 'D. modernism', 0],
+        ['What kind of job was Joseph Conrad when he was young, and then this career experience affected his work, “Heart of Darkness”?', ['A. teacher', 'B. priest', 'C. sailor', 'D. painter'], 'C. sailor', 0],
+        ['What is Woolf’s Mrs. Dalloway commonly considered to be a response to?', ['A. Ulysses', 'B. The Lady with the Dog', 'C. A Rose for Emily', 'D. A Doll House'], 'A. Ulysses', 0],
+        ['Which film is interconnected with the novel Mrs. Dalloway?', ['A. Gone with the Wind', 'B. The Hours', 'C. Pride & Prejudice', "D. Breakfast at Tiffany's"], 'B. The Hours', 0],
+        ['What is the narrative method of Woolf’s Mrs. Dalloway?', ['A. stream of consciousness', 'B. multiperspectivity', 'C. first-person narrative', 'D. stream of unconsciousness'], 'A. stream of consciousness', 0],
+        ['Which war did George Orwell voluntarily fight in?', ['A. World War I', 'B. World War II', 'C. Spanish Civil War', 'D. Irish War of Independence'], 'C. Spanish Civil War', 0],
+        ['In Orwell’s Animal Farm, what animal calls for the overthrow of humans?', ['A. Cats', 'B. Pigs', 'C. Dogs', 'D. Horses'], 'B. Pigs', 0],
+        ['Which does George Orwell support for?', ['A. Totalitarianism', ' B. Stalinism', 'C. Anarchism', 'D. Democratic socialism'], 'D. Democratic socialism', 0],
+        ['In Yeats’ “The Lake Isle of Innisfree”, what is the reasoning behind his desire to travel to Innisfree?', ['A. love', 'B. peace', 'C. family', 'D. career'], 'B. peace', 0],
+        ['Which is not the work of Yeats?', ['A. The Second Coming', 'B. When you are old', 'C. Leda and the Swan', 'D. The Chimney Sweeper'], 'D. The Chimney Sweeper', 0],
+        ['Where was Yeats born?', ['A. Ireland', 'B. France', 'C. Poland', 'D. Italy'], 'A. Ireland', 0],
     ];
 
     // Here are out variables
