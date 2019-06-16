@@ -4,7 +4,7 @@ WWTBAM.Game = function() {
     // Here's our array of questions in the following format :
     // [question, potential answers, answer, money]
     questions = [
-       ['Which is not the theme about Conrad’s “Heart of Darkness”?', ['A. racial discrimination', 'B. feminism', 'C. anti-war', 'D. anti-colonial'], 'C. anti-war', 0],
+        ['Which is not the theme about Conrad’s “Heart of Darkness”?', ['A. racial discrimination', 'B. feminism', 'C. anti-war', 'D. anti-colonial'], 'C. anti-war', 0],
         ['What doctrine is Joseph Conrad regarded as a pioneer?', ['A. romanticism', 'B. utopianism', 'C. humanitarianism', 'D. modernism'], 'D. modernism', 0],
         ['What kind of job was Joseph Conrad when he was young, and then this career experience affected his work, “Heart of Darkness”?', ['A. teacher', 'B. priest', 'C. sailor', 'D. painter'], 'C. sailor', 0],
         ['What is Woolf’s Mrs. Dalloway commonly considered to be a response to?', ['A. Ulysses', 'B. The Lady with the Dog', 'C. A Rose for Emily', 'D. A Doll House'], 'A. Ulysses', 0],
