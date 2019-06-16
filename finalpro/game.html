@@ -43,17 +43,15 @@
         </div>
     </nav>
     <div id="game_board" style="margin-top: 200px">
-        <div class="main-body">
-            <h1>Who wants to be a millionaire?</h1>
-            <button type="button" id="startBtn" onclick="init()">START</button>
+        <h1>Who wants to be a millionaire?</h1>
+        <div className="memory-blocks__panel">
+            <button className="memory-blocks__start-btn" onClick={this.handleOnGameStart}>
+                    START
+            </button>
         </div>
+
     </div>
-    <!-- <script>
-        $("#startBtn").click(function() {
-            WWTBAM.Game();
-            init();
-        });
-    </script> -->
+
 
     <!-- Footer -->
     <footer class="py-5 bg-dark" style="margin-top: 200px">

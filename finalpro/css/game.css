@@ -22,3 +22,12 @@
     border: chocolate;
     border-radius: .5rem!important;
 }
+
+.memory-blocks__panel {
+    position: absolute;
+    width: 800px;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
