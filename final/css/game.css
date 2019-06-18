@@ -1,0 +1,73 @@
+#game_board {
+    background: whitesmoke;
+    border: rgb(126, 119, 119) 1px solid;
+    width: 800px;
+    height: 580px;
+    padding: 24px;
+    margin: 0px auto;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.question {
+    margin-bottom: -10px;
+    font-size: 25px;
+}
+
+.answers button {
+    color: #000;
+    background-color: #9e9e9e30;
+    border-color: #9E9E9E;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    width: 600px;
+    font-weight: 300px;
+    margin-bottom: 20px;
+}
+
+.answers button:hover {
+    background-color: rgb(255, 187, 0);
+    color: white;
+    border-color: #FFC107;
+}
+
+.fifty-fifty {
+    margin-top: 25px;
+    color: black;
+    background-color: #ef4235;
+    border-color: #f7483b;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+
+.fifty-fifty:hover {
+    background-color: rgb(247, 39, 23);
+    color: white;
+}
+
+.lifeLine {
+    display: none;
+}
+
+.restart {
+    display: none;
+    color: white;
+    background-color: #2196F3;
+    border-color: #00BCD4;
+    border-radius: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.restart:hover {
+    background-color: #1613bf;
+    border-color: #57629a;
+}
