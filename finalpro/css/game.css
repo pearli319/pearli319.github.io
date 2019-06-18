@@ -66,3 +66,8 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.restart:hover {
+    background-color: #1613bf;
+    border-color: #57629a;
+}
