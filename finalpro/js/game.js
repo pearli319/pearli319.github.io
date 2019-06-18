@@ -4,18 +4,18 @@ WWTBAM.Game = function() {
     // Here's our array of questions in the following format :
     // [question, potential answers, answer, money]
     questions = [
-        ['Which is not the theme about Conrad’s “Heart of Darkness”?', ['A. racial discrimination', 'B. feminism', 'C. anti-war', 'D. anti-colonial'], 'C. anti-war', 0],
-        ['What doctrine is Joseph Conrad regarded as a pioneer?', ['A. romanticism', 'B. utopianism', 'C. humanitarianism', 'D. modernism'], 'D. modernism', 0],
-        ['What kind of job was Joseph Conrad when he was young, and then this career experience affected his work, “Heart of Darkness”?', ['A. teacher', 'B. priest', 'C. sailor', 'D. painter'], 'C. sailor', 0],
-        ['What is Woolf’s Mrs. Dalloway commonly considered to be a response to?', ['A. Ulysses', 'B. The Lady with the Dog', 'C. A Rose for Emily', 'D. A Doll House'], 'A. Ulysses', 0],
-        ['Which film is interconnected with the novel Mrs. Dalloway?', ['A. Gone with the Wind', 'B. The Hours', 'C. Pride & Prejudice', "D. Breakfast at Tiffany's"], 'B. The Hours', 0],
-        ['What is the narrative method of Woolf’s Mrs. Dalloway?', ['A. stream of consciousness', 'B. multiperspectivity', 'C. first-person narrative', 'D. stream of unconsciousness'], 'A. stream of consciousness', 0],
-        ['Which war did George Orwell voluntarily fight in?', ['A. World War I', 'B. World War II', 'C. Spanish Civil War', 'D. Irish War of Independence'], 'C. Spanish Civil War', 0],
-        ['In Orwell’s Animal Farm, what animal calls for the overthrow of humans?', ['A. Cats', 'B. Pigs', 'C. Dogs', 'D. Horses'], 'B. Pigs', 0],
-        ['Which does George Orwell support for?', ['A. Totalitarianism', ' B. Stalinism', 'C. Anarchism', 'D. Democratic socialism'], 'D. Democratic socialism', 0],
-        ['In Yeats’ “The Lake Isle of Innisfree”, what is the reasoning behind his desire to travel to Innisfree?', ['A. love', 'B. peace', 'C. family', 'D. career'], 'B. peace', 0],
-        ['Which is not the work of Yeats?', ['A. The Second Coming', 'B. When you are old', 'C. Leda and the Swan', 'D. The Chimney Sweeper'], 'D. The Chimney Sweeper', 0],
-        ['Where was Yeats born?', ['A. Ireland', 'B. France', 'C. Poland', 'D. Italy'], 'A. Ireland', 0],
+        ['In Orwell’s Animal Farm, what animal calls for the overthrow of humans?', ['A. Cats', 'B. Pigs', 'C. Dogs', 'D. Horses'], 'B. Pigs', 1000],
+        ['Which does George Orwell support for?', ['A. Totalitarianism', ' B. Stalinism', 'C. Anarchism', 'D. Democratic socialism'], 'D. Democratic socialism', 5000],
+        ['Where was Yeats born?', ['A. Ireland', 'B. France', 'C. Poland', 'D. Italy'], 'A. Ireland', 10000],
+        ['Which is not the work of Yeats?', ['A. The Second Coming', 'B. When you are old', 'C. Leda and the Swan', 'D. The Chimney Sweeper'], 'D. The Chimney Sweeper', 40000],
+        ['In Yeats’ “The Lake Isle of Innisfree”, what is the reasoning behind his desire to travel to Innisfree?', ['A. love', 'B. peace', 'C. family', 'D. career'], 'B. peace', 80000],
+        ['Which film is interconnected with the novel Mrs. Dalloway?', ['A. Gone with the Wind', 'B. The Hours', 'C. Pride & Prejudice', "D. Breakfast at Tiffany's"], 'B. The Hours', 100000],
+        ['Which war did George Orwell voluntarily fight in?', ['A. World War I', 'B. World War II', 'C. Spanish Civil War', 'D. Irish War of Independence'], 'C. Spanish Civil War', 300000],
+        ['What kind of job was Joseph Conrad when he was young, and then this career experience affected his work, “Heart of Darkness”?', ['A. teacher', 'B. priest', 'C. sailor', 'D. painter'], 'C. sailor', 600000],
+        ['Which is not the theme about Conrad’s “Heart of Darkness”?', ['A. racial discrimination', 'B. feminism', 'C. anti-war', 'D. anti-colonial'], 'C. anti-war', 700000],
+        ['What doctrine is Joseph Conrad regarded as a pioneer?', ['A. romanticism', 'B. utopianism', 'C. humanitarianism', 'D. modernism'], 'D. modernism', 800000],
+        ['What is Woolf’s Mrs. Dalloway commonly considered to be a response to?', ['A. Ulysses', 'B. The Lady with the Dog', 'C. A Rose for Emily', 'D. A Doll House'], 'A. Ulysses', 900000],
+        ['What is the narrative method of Woolf’s Mrs. Dalloway?', ['A. stream of consciousness', 'B. multiperspectivity', 'C. first-person narrative', 'D. stream of unconsciousness'], 'A. stream of consciousness', 1000000],
     ];
 
     // Here are out variables
@@ -33,8 +33,6 @@ WWTBAM.Game = function() {
     var bank = $('.bank');
     // Fifty fifty button
     var fiftyFifty = $('.fifty-fifty');
-    // Free Pass Button
-    var freePass = $('.free-pass');
     // Lineline shared class
     var lifeLine = $('.lifeline');
 
@@ -48,18 +46,6 @@ WWTBAM.Game = function() {
 
         // If the restart button is clicked then we call the reStart() function
         restart.click(reStart);
-
-        // Free pass functionality
-        freePass.click(function() {
-
-            // Hide the button
-            freePass.hide();
-
-            // Jump to next question
-            nextQuestion();
-
-        });
-
     }
 
     // Here's our starting point, it's also the place we will come back to when we want to ask the next question
@@ -87,7 +73,7 @@ WWTBAM.Game = function() {
         else {
 
             // Change balance to a million
-            bank.html("Balance : £1m");
+            bank.html("Money : $1000000");
             // We don't want to see a question so outputting a message instead
             questionBox.html("You're a millionaire");
             // We don't want to see any answers here
@@ -117,13 +103,13 @@ WWTBAM.Game = function() {
 
         // Output the answers also incuding a data attribute which contains the answer
         // Remove any whitesapce from the answers
-        answers.append('<li data-answer=' + questions[counterNum][1][0].replace(/ /g, '') + '>' + questions[counterNum][1][0] + '</li>');
-        answers.append('<li data-answer=' + questions[counterNum][1][1].replace(/ /g, '') + '>' + questions[counterNum][1][1] + '</li>');
-        answers.append('<li data-answer=' + questions[counterNum][1][2].replace(/ /g, '') + '>' + questions[counterNum][1][2] + '</li>');
-        answers.append('<li data-answer=' + questions[counterNum][1][3].replace(/ /g, '') + '>' + questions[counterNum][1][3] + '</li>');
+        answers.append('<button type="button" data-answer=' + questions[counterNum][1][0].replace(/ /g, '') + '>' + questions[counterNum][1][0] + '</button>');
+        answers.append('<button type="button" data-answer=' + questions[counterNum][1][1].replace(/ /g, '') + '>' + questions[counterNum][1][1] + '</button>');
+        answers.append('<button type="button" data-answer=' + questions[counterNum][1][2].replace(/ /g, '') + '>' + questions[counterNum][1][2] + '</button>');
+        answers.append('<button type="button" data-answer=' + questions[counterNum][1][3].replace(/ /g, '') + '>' + questions[counterNum][1][3] + '</button>');
 
         // Taking the 4th element from the array(money) and outputting it
-        bank.html("Balance : £" + questions[counterNum][3]);
+        bank.html("Money : $" + questions[counterNum][3]);
 
         // Taking the answer from the array and storing it in global variable
         correctAnswer = questions[counterNum][2];
@@ -134,7 +120,7 @@ WWTBAM.Game = function() {
         correctAnswer = correctAnswer.replace(/ /g, '').toLowerCase();
 
         // Once they click an answer we call the answerQuestion function 
-        $('.answers li').on('click', answerQuestion);
+        $('.answers button').on('click', answerQuestion);
 
         // Fifty Fifty functionality
         fiftyFifty.click(function() {
@@ -146,7 +132,7 @@ WWTBAM.Game = function() {
             fiftyFiftycount = 0;
 
             //Loop through each li and check what the answers are
-            $(".answers li").each(function() {
+            $(".answers button").each(function() {
 
                 // If count is lower than 2 then we will remove 2 incorrect answers
                 if (fiftyFiftycount < 2) {
@@ -174,7 +160,7 @@ WWTBAM.Game = function() {
     function answerQuestion() {
 
         // Unbind the answer button
-        $('.answers li').off();
+        $('.answers button').off();
 
         // Take the data attribute form the answer the user clicked and remove spaces and change to lowercase
         var UserAnswer = $(this).data('answer').replace(/ /g, '').toLowerCase();
@@ -193,7 +179,7 @@ WWTBAM.Game = function() {
             // Tell them they've lost
             questionBox.html("Sorry you've lost your money");
             // Reset the bank balance
-            bank.html("Balance : £0");
+            bank.html("Money : $0");
             // We don't want to see any answers here
             answers.hide();
             // We do want to see a reset button here
@@ -223,9 +209,6 @@ WWTBAM.Game = function() {
         lifeLine.show();
         // Show the button
         fiftyFifty.show();
-        // Show the button
-        freePass.show();
-
     }
 
     init();
