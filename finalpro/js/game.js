@@ -216,7 +216,6 @@ WWTBAM.Game = function() {
 
 
 // ON DOC READY
-$(function() {
+window.onload = function() {
     new WWTBAM.Game();
-
-});
+};
