@@ -14,8 +14,10 @@
 
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/game.css">
 
+    <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/font.css">
 </head>
 
 <body id="page-top" style="background-color: #1abc9c">
@@ -42,16 +44,29 @@
             </div>
         </div>
     </nav>
-    <div id="game_board" style="margin-top: 200px">
-        <h1>Who wants to be a millionaire?</h1>
-        <div className="memory-blocks__panel">
-            <button className="memory-blocks__start-btn" onClick={this.handleOnGameStart}>
-                    START
-            </button>
+
+    <h1 style="margin-top: 100px">Who wants to be a millionaire?</h1>
+
+    <div id="game_board">
+        <i class="fas fa-hand-holding-usd fa-3x"></i>
+        <p class="bank">$0</p>
+
+
+
+        <h5 class="question-number">Question</h5>
+        <p class="question"></p>
+        <br>
+
+        <ul class="answers"></ul>
+        <br>
+
+        <button class="restart">Play again</button>
+
+        <div class="lifeline">
+            <button class="fifty-fifty"><i class="far fa-heart"></i> 50/50</button>
         </div>
 
     </div>
-
 
     <!-- Footer -->
     <footer class="py-5 bg-dark" style="margin-top: 200px">
